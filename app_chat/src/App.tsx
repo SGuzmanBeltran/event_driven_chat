@@ -28,7 +28,6 @@ const App = () => {
 
 	return (
 		<div>
-			<h1>Real-Time Chat with Socket.IO & Zustand</h1>
 			<Chat />
 		</div>
 	);
