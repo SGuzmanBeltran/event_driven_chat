@@ -1,4 +1,5 @@
 import Chat from "./Chat";
+import { ThemeProvider } from "./components/ThemeProvider";
 import io from "socket.io-client";
 import useChatStore from "./stores/chat.store";
 // App.js
@@ -27,9 +28,9 @@ const App = () => {
 	}, [addMessage, setSocket]);
 
 	return (
-		<div>
+		<ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
 			<Chat />
-		</div>
+		</ThemeProvider>
 	);
 };
 

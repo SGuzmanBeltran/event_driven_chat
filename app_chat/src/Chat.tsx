@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { ModeToggle } from "./components/ModeToggle";
 import { Send } from "lucide-react";
 import useChatStore from "./stores/chat.store";
 
@@ -26,6 +27,7 @@ const Chat = () => {
 		<div className="flex flex-col h-screen">
 			<div className="p-4 flex-1 max-w-2xl mx-auto w-full flex flex-col">
 				<h2 className="text-2xl font-bold mb-4">Messages</h2>
+				<ModeToggle />
 				<div className="flex-1 overflow-y-auto space-y-4 mb-4">
 					<ul className="space-y-2">
 						{messages.map((msg, idx) => (
